@@ -4,10 +4,7 @@ trait SComponent:
     val key: String
     protected var guiCTX: Option[GUI] = None
     def setCTX(ctx: GUI): Unit = guiCTX = Some(ctx) 
-    def getCTX(): GUI =
-        guiCTX match
-            case None => throw Exception("Ctx was not correctly set")
-            case Some(value) => value
+    def getCTX(): GUI = guiCTX.getOrElse(throw Exception("Ctx was not set correctly"))
          
     def cascade(): Component
 
