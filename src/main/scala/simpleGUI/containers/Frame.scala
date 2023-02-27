@@ -8,5 +8,5 @@ final case class SFrame(key: String, layout: LayoutManager)(children: SComponent
         frame.setVisible(true)
         frame.setLayout(layout)
         frame.setSize(500, 500)
-        frame.setDefaultCloseOperation(0)
+        frame.setDefaultCloseOperation(1)
         frame

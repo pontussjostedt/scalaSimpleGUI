@@ -10,7 +10,7 @@ case class GUI(sFrame: SFrame):
     sFrame.setCTX(this)
     SwingUtilities.invokeLater{() => 
         val jFrame = sFrame.cascade().asInstanceOf[javax.swing.JFrame]
-        jFrame.pack()
+        //jFrame.pack()
     }
 
     def setGetter(key: String, getter: () => Any): Unit = 

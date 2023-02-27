@@ -5,9 +5,10 @@ object blob:
     @main
     def main: Unit =
         val x: GUI = GUI(
-            SFrame("Hello", GridLayout(2, 1))(
+            SFrame("Hello", GridLayout(3, 1))(
                 SButton("Button"),
-                SButton("OtherButton")
+                SSlider("bob", 0, 100),
+                SSlider("bob", 0, 100, 50, SSlider.addTicks(5, 10, true))
             )
         )
 
