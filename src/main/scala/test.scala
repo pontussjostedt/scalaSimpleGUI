@@ -1,23 +1,23 @@
 import simpleGUI.*
 import java.awt.GridLayout
 
-object blob:
+object test:
     @main
     def main: Unit =
-        val x: GUI = GUI(
-            SFrame("Hello", GridLayout(2, 2))(
+        val gui: GUI = GUI(
+            SFrame("Window Name", GridLayout(2, 2))(
                 SButton("Button"),
-                SSlider("bob", 0, 100),
-                SSlider("hello", 0, 100, 50, SSlider.addTicks(5, 10, true)),
-                PagePanel("pageThingi")(
-                    "Page1" -> SButton("Hello"),
-                    "Page2" -> SButton("Blobski")
+                SSlider("Slider", 0, 100),
+                SSlider("SliderTicks", 0, 100, 50, SSlider.addTicks(5, 10, true)),
+                PagePanel("PageThingi")(
+                    "Page1" -> SButton("ButtonPage1"),
+                    "Page2" -> SButton("ButtonPage2")
                 )
             )
         )
 
         while(true)
-            println(x.awaitEvent())
+            println(gui.awaitEvent())
         
   
 
